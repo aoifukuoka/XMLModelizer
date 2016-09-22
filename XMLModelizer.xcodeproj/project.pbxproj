@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09CAD7E4CDA9A193710D5A81 /* Pods_XMLModelizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E005A964AE39D93DCAFB8106 /* Pods_XMLModelizer.framework */; };
+		7E62E1D61D93D3DA0007D166 /* KissXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E62E1D41D93D28A0007D166 /* KissXML.framework */; };
+		7E62E1D71D93D3DA0007D166 /* KissXML.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E62E1D41D93D28A0007D166 /* KissXML.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7E75E82D1D93C80E0081813E /* XMLModelizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E75E8231D93C80E0081813E /* XMLModelizer.framework */; };
 		7E75E8321D93C80E0081813E /* XMLModelizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75E8311D93C80E0081813E /* XMLModelizerTests.swift */; };
 		7E75E8341D93C80E0081813E /* XMLModelizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E75E8261D93C80E0081813E /* XMLModelizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -17,6 +20,7 @@
 		7E75E84E1D93C8270081813E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E75E84C1D93C8270081813E /* LaunchScreen.storyboard */; };
 		7E75E8531D93C8320081813E /* XMLModelizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E75E8231D93C80E0081813E /* XMLModelizer.framework */; };
 		7E75E8541D93C8320081813E /* XMLModelizer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E75E8231D93C80E0081813E /* XMLModelizer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7EC66A561D93CFE900A14464 /* XMLModelizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC66A551D93CFE900A14464 /* XMLModelizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7E62E1D71D93D3DA0007D166 /* KissXML.framework in Embed Frameworks */,
 				7E75E8541D93C8320081813E /* XMLModelizer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -51,6 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		244F0F2C4F0FEEA089AF458D /* Pods-XMLModelizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMLModelizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMLModelizer/Pods-XMLModelizer.release.xcconfig"; sourceTree = "<group>"; };
+		7E62E1D41D93D28A0007D166 /* KissXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KissXML.framework; path = "Build/Products/Debug-iphonesimulator/KissXML/KissXML.framework"; sourceTree = "<group>"; };
 		7E75E8231D93C80E0081813E /* XMLModelizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMLModelizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E75E8261D93C80E0081813E /* XMLModelizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLModelizer.h; sourceTree = "<group>"; };
 		7E75E8271D93C80E0081813E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +71,9 @@
 		7E75E84A1D93C8270081813E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E75E84D1D93C8270081813E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E75E84F1D93C8270081813E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EC66A551D93CFE900A14464 /* XMLModelizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLModelizer.swift; sourceTree = "<group>"; };
+		B04DF493DE2760E0A7F3D299 /* Pods-XMLModelizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMLModelizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMLModelizer/Pods-XMLModelizer.debug.xcconfig"; sourceTree = "<group>"; };
+		E005A964AE39D93DCAFB8106 /* Pods_XMLModelizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMLModelizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09CAD7E4CDA9A193710D5A81 /* Pods_XMLModelizer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E62E1D61D93D3DA0007D166 /* KissXML.framework in Frameworks */,
 				7E75E8531D93C8320081813E /* XMLModelizer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +105,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4722D2404DEA15A77FFBA9AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E62E1D41D93D28A0007D166 /* KissXML.framework */,
+				E005A964AE39D93DCAFB8106 /* Pods_XMLModelizer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C9F507E5D8CCE4828AE58C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B04DF493DE2760E0A7F3D299 /* Pods-XMLModelizer.debug.xcconfig */,
+				244F0F2C4F0FEEA089AF458D /* Pods-XMLModelizer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7E75E8191D93C80E0081813E = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +130,8 @@
 				7E75E8251D93C80E0081813E /* XMLModelizer */,
 				7E75E8301D93C80E0081813E /* XMLModelizerTests */,
 				7E75E8241D93C80E0081813E /* Products */,
+				7C9F507E5D8CCE4828AE58C3 /* Pods */,
+				4722D2404DEA15A77FFBA9AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				7E75E8261D93C80E0081813E /* XMLModelizer.h */,
+				7EC66A551D93CFE900A14464 /* XMLModelizer.swift */,
 				7E75E8271D93C80E0081813E /* Info.plist */,
 			);
 			path = XMLModelizer;
@@ -162,10 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E75E8371D93C80E0081813E /* Build configuration list for PBXNativeTarget "XMLModelizer" */;
 			buildPhases = (
+				29F2829A7E3E31BC9B231CBF /* [CP] Check Pods Manifest.lock */,
 				7E75E81E1D93C80E0081813E /* Sources */,
 				7E75E81F1D93C80E0081813E /* Frameworks */,
 				7E75E8201D93C80E0081813E /* Headers */,
 				7E75E8211D93C80E0081813E /* Resources */,
+				2297D297C1A24CDE7034A960 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,6 +261,7 @@
 					7E75E8221D93C80E0081813E = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = V95BJPWBF3;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					7E75E82B1D93C80E0081813E = {
@@ -287,11 +323,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2297D297C1A24CDE7034A960 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMLModelizer/Pods-XMLModelizer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29F2829A7E3E31BC9B231CBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7E75E81E1D93C80E0081813E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC66A561D93CFE900A14464 /* XMLModelizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,32 +518,45 @@
 		};
 		7E75E8381D93C80E0081813E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B04DF493DE2760E0A7F3D299 /* Pods-XMLModelizer.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = V95BJPWBF3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator/KissXML",
+				);
 				INFOPLIST_FILE = XMLModelizer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aoponaopon.XMLModelizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		7E75E8391D93C80E0081813E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244F0F2C4F0FEEA089AF458D /* Pods-XMLModelizer.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = V95BJPWBF3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator/KissXML",
+				);
 				INFOPLIST_FILE = XMLModelizer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -487,6 +570,7 @@
 		7E75E83B1D93C80E0081813E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = V95BJPWBF3;
 				INFOPLIST_FILE = XMLModelizerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -499,6 +583,7 @@
 		7E75E83C1D93C80E0081813E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = V95BJPWBF3;
 				INFOPLIST_FILE = XMLModelizerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -511,8 +596,13 @@
 		7E75E8511D93C8270081813E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V95BJPWBF3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator/KissXML",
+				);
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aoponaopon.Demo;
@@ -524,8 +614,13 @@
 		7E75E8521D93C8270081813E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V95BJPWBF3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator/KissXML",
+				);
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aoponaopon.Demo;

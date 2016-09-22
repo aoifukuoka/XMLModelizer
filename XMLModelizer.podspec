@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/aoifukuoka/XMLModelizer.git", :tag => s.version.to_s }
   s.platform     = :ios, '8.0'
   s.source_files = 'XMLModelizer/**/*.{h,m,swift}'
-  # s.dependency "", ""
+  s.dependency "KissXML", "5.1.2"
   # s.description      = <<-DESC
   #DESC
 end
