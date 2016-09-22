@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Demo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>XMLModelizer.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>7E75E82B1D93C80E0081813E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7E75E8401D93C8270081813E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
