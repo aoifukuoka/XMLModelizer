@@ -13,12 +13,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let models: [NYTimesArticle] = XMLModelizer.modelize(modelClass: NYTimesArticle.self, urlString: "http://rss.nytimes.com/services/xml/rss/nyt/World.xml") as! [NYTimesArticle]
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

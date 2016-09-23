@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		09CAD7E4CDA9A193710D5A81 /* Pods_XMLModelizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E005A964AE39D93DCAFB8106 /* Pods_XMLModelizer.framework */; };
+		7E231CF31D93F89D0047D58F /* NSObject+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E231CF21D93F89D0047D58F /* NSObject+Properties.swift */; };
 		7E62E1D61D93D3DA0007D166 /* KissXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E62E1D41D93D28A0007D166 /* KissXML.framework */; };
 		7E62E1D71D93D3DA0007D166 /* KissXML.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E62E1D41D93D28A0007D166 /* KissXML.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7E62E1DA1D93D74A0007D166 /* NYTimesArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62E1D91D93D74A0007D166 /* NYTimesArticle.swift */; };
+		7E62E1DD1D93D8460007D166 /* XMLModelizerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62E1DC1D93D8460007D166 /* XMLModelizerModel.swift */; };
 		7E75E82D1D93C80E0081813E /* XMLModelizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E75E8231D93C80E0081813E /* XMLModelizer.framework */; };
 		7E75E8321D93C80E0081813E /* XMLModelizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75E8311D93C80E0081813E /* XMLModelizerTests.swift */; };
 		7E75E8341D93C80E0081813E /* XMLModelizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E75E8261D93C80E0081813E /* XMLModelizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,7 +60,10 @@
 
 /* Begin PBXFileReference section */
 		244F0F2C4F0FEEA089AF458D /* Pods-XMLModelizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMLModelizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMLModelizer/Pods-XMLModelizer.release.xcconfig"; sourceTree = "<group>"; };
+		7E231CF21D93F89D0047D58F /* NSObject+Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Properties.swift"; sourceTree = "<group>"; };
 		7E62E1D41D93D28A0007D166 /* KissXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KissXML.framework; path = "Build/Products/Debug-iphonesimulator/KissXML/KissXML.framework"; sourceTree = "<group>"; };
+		7E62E1D91D93D74A0007D166 /* NYTimesArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTimesArticle.swift; sourceTree = "<group>"; };
+		7E62E1DC1D93D8460007D166 /* XMLModelizerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLModelizerModel.swift; sourceTree = "<group>"; };
 		7E75E8231D93C80E0081813E /* XMLModelizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMLModelizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E75E8261D93C80E0081813E /* XMLModelizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLModelizer.h; sourceTree = "<group>"; };
 		7E75E8271D93C80E0081813E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +129,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7E231CF11D93F80A0047D58F /* extentions */ = {
+			isa = PBXGroup;
+			children = (
+				7E231CF21D93F89D0047D58F /* NSObject+Properties.swift */,
+			);
+			name = extentions;
+			sourceTree = "<group>";
+		};
+		7E62E1D81D93D68F0007D166 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7E62E1D91D93D74A0007D166 /* NYTimesArticle.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		7E62E1DB1D93D82C0007D166 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7E62E1DC1D93D8460007D166 /* XMLModelizerModel.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
 		7E75E8191D93C80E0081813E = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +180,8 @@
 			children = (
 				7E75E8261D93C80E0081813E /* XMLModelizer.h */,
 				7EC66A551D93CFE900A14464 /* XMLModelizer.swift */,
+				7E231CF11D93F80A0047D58F /* extentions */,
+				7E62E1DB1D93D82C0007D166 /* models */,
 				7E75E8271D93C80E0081813E /* Info.plist */,
 			);
 			path = XMLModelizer;
@@ -169,6 +201,7 @@
 			children = (
 				7E75E8431D93C8270081813E /* AppDelegate.swift */,
 				7E75E8451D93C8270081813E /* ViewController.swift */,
+				7E62E1D81D93D68F0007D166 /* models */,
 				7E75E8471D93C8270081813E /* Main.storyboard */,
 				7E75E84A1D93C8270081813E /* Assets.xcassets */,
 				7E75E84C1D93C8270081813E /* LaunchScreen.storyboard */,
@@ -362,6 +395,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EC66A561D93CFE900A14464 /* XMLModelizer.swift in Sources */,
+				7E62E1DD1D93D8460007D166 /* XMLModelizerModel.swift in Sources */,
+				7E231CF31D93F89D0047D58F /* NSObject+Properties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E75E8461D93C8270081813E /* ViewController.swift in Sources */,
+				7E62E1DA1D93D74A0007D166 /* NYTimesArticle.swift in Sources */,
 				7E75E8441D93C8270081813E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
