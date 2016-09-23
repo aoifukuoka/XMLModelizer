@@ -51,7 +51,7 @@ open class XMLModelizer: NSObject {
         for i in 0..<modelCount {
             let model = (modelClass as NSObject.Type).init()
             for (property, values) in propertyValues {
-                if modelClass.properties.contains(property) {
+                if modelClass.classProperties.contains(property) {
                     model.setValue(values[i], forKey: property)
                 }
             }

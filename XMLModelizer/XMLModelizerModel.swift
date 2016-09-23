@@ -25,6 +25,7 @@ open class XMLModelizerModel: NSObject {
     }
     
     open class var classProperties: [String] {
+        
         var resultSet: [String] = []
         var count: UInt32 = 0
         let properties = class_copyPropertyList(self, &count)
