@@ -11,13 +11,15 @@ import XMLModelizer
 
 class NYTimesArticle: XMLModelizerModel {
     
-    var title: String!
-    var link: String!
+    var title: [String]!
+    var link: [String]!
+    var media: [String]!
     
     override class func xmlModelizerXpathKeyMap() -> [String:String] {
         return [
             "title":"//item/title",
             "link":"//item/link",
+            "media":"//item/media:content/@url"
         ]
     }
 }

@@ -8,20 +8,42 @@
 
 import UIKit
 import XMLModelizer
+import AFSheme
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let models: [NYTimesArticle] = XMLModelizer.modelize(modelClass: NYTimesArticle.self, urlString: "http://rss.nytimes.com/services/xml/rss/nyt/World.xml") as! [NYTimesArticle]
-        
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    @available(iOS 2.0, *)
+    
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
 
+    
+    @IBOutlet var urlSelect: UIPickerView!
+    var pickerDataSource = ["NYTimes", "Petmd", "Elle"];
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        urlSelect.delegate = self
+        urlSelect.dataSource = self
+    }
+
+    @IBAction func nextButtonDidTapped(_ sender: AnyObject) {
+        let rssTableViewController: RSSTableViewController = RSSTableViewController.instantiateWithStoryBoard()
+        rssTableViewController.theme = pickerDataSource[urlSelect.selectedRow(inComponent: 0)]
+        self.navigationController?.pushViewController(rssTableViewController, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerDataSource.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerDataSource[row]
+    }
 }
 

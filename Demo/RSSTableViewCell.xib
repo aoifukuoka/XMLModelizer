@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RSSTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ybC-WT-XI3" customClass="RSSTableViewCell" customModule="Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ybC-WT-XI3" id="fPP-k5-1Vh">
+                <frame key="frameInset" width="375" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acc-Dl-Owp">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fg6-Zn-LEg">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="315" id="KIy-UL-yRq"/>
+                            <constraint firstAttribute="width" secondItem="Fg6-Zn-LEg" secondAttribute="height" multiplier="1:1" id="ORc-Yy-Afn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KIy-UL-yRq"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Fg6-Zn-LEg" firstAttribute="top" secondItem="fPP-k5-1Vh" secondAttribute="top" id="2wr-Ke-LMG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="acc-Dl-Owp" secondAttribute="bottom" id="A4R-hA-Jz4"/>
+                    <constraint firstItem="acc-Dl-Owp" firstAttribute="leading" secondItem="Fg6-Zn-LEg" secondAttribute="trailing" constant="10" id="PlV-UN-xui"/>
+                    <constraint firstItem="Fg6-Zn-LEg" firstAttribute="leading" secondItem="fPP-k5-1Vh" secondAttribute="leading" id="bUT-0m-Dqh"/>
+                    <constraint firstAttribute="bottom" secondItem="Fg6-Zn-LEg" secondAttribute="bottom" id="mV2-sC-R3q"/>
+                    <constraint firstItem="acc-Dl-Owp" firstAttribute="top" secondItem="fPP-k5-1Vh" secondAttribute="topMargin" id="vNm-fv-zaa"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="acc-Dl-Owp" secondAttribute="trailing" id="zkr-Ub-MsX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="thumbImageView" destination="Fg6-Zn-LEg" id="wyA-uN-CwK"/>
+                <outlet property="titleTextLabel" destination="acc-Dl-Owp" id="gFT-4f-GV9"/>
+            </connections>
+            <point key="canvasLocation" x="35" y="102"/>
+        </tableViewCell>
+    </objects>
+</document>

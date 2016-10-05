@@ -35,27 +35,36 @@ open class XMLModelizer: NSObject {
             return []
         }
         
-        var propertyValues :[String:[String]] = [:]
-        do {
-            let document: DDXMLDocument! = try? DDXMLDocument.init(data: xmlData as Data, options: 0)
-            for (key, xpath) in modelClass.xmlModelizerXpathKeyMap() {
-                let values: [String] = try document.nodes(forXPath: xpath).map{(($0 as DDXMLNode).stringValue!)}
-                propertyValues[key] = values
-            }
-        } catch {
-            return []
-        }
-        
+        let document: DDXMLDocument! = try? DDXMLDocument.init(data: xmlData as Data, options: 0)
         var resultSet: [AnyObject] = []
-        let modelCount: Int = propertyValues[Array(propertyValues.keys).first!]!.count
-        for i in 0..<modelCount {
-            let model = (modelClass as NSObject.Type).init()
-            for (property, values) in propertyValues {
-                if modelClass.classProperties.contains(property) {
-                    model.setValue(values[i], forKey: property)
+        
+        for (key, xpath) in modelClass.xmlModelizerXpathKeyMap() {
+            var xpathElements: [String] = xpath.components(separatedBy: "/").filter{$0 != ""}
+            if xpathElements.count == 1 {
+                
+            }else if(xpathElements.count > 1){
+                
+                let topLevelElements: [DDXMLNode]! = try? document.nodes(forXPath: "//" + xpathElements.removeFirst())
+                let newXpath: String = "//" + xpathElements.joined(separator: "/")
+                for topLevelElement in topLevelElements {
+                    
+                    //create if not exists
+                    let idx = topLevelElements.index(of: topLevelElement)
+                    if !resultSet.indices.contains(idx!) {
+                        let model = (modelClass as NSObject.Type).init()
+                        resultSet.append(model)
+                    }
+                    
+                    let values = try? topLevelElement.nodes(forXPath: newXpath)
+                    let resultValue: [String] = (values?
+                        .filter{$0.isDescendantOf(node: topLevelElement)})!
+                        .map{$0.stringValue!}
+                    
+                    if modelClass.classProperties.contains(key) {
+                        (resultSet[idx!] as! XMLModelizerModel).setValue(resultValue, forKey: key)
+                    }
                 }
             }
-            resultSet.append(model)
         }
         return resultSet
     }
