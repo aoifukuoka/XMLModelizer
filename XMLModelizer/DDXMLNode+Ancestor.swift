@@ -26,7 +26,4 @@ extension DDXMLNode {
             return (self.parent?.isDescendantOf(node: node))!
         }
     }
-    
-    
-    
 }

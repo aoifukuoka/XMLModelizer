@@ -39,6 +39,7 @@ open class XMLModelizer: NSObject {
         var resultSet: [AnyObject] = []
         
         for (key, xpath) in modelClass.xmlModelizerXpathKeyMap() {
+            
             var xpathElements: [String] = xpath.components(separatedBy: "/").filter{$0 != ""}
             if xpathElements.count == 1 {
                 

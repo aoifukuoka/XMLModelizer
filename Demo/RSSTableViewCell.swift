@@ -12,10 +12,13 @@ class RSSTableViewCell: UITableViewCell {
 
     @IBOutlet var titleTextLabel: UILabel!
     @IBOutlet var thumbImageView: UIImageView!
+    @IBOutlet var categoryLabel: UILabel!
+    @IBOutlet var pubDateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        titleTextLabel.lineBreakMode = NSLineBreakMode.byCharWrapping
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
