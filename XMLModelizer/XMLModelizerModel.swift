@@ -10,10 +10,10 @@ import UIKit
 
 open class XMLModelizerModel: NSObject {
     
-    var _title: String!
-    var _link: String!
-    var _guid: String!
-    var _description: String!
+    var _title: [String]!
+    var _link: [String]!
+    var _guid: [String]!
+    var _description: [String]!
     
     open class func xmlModelizerXpathKeyMap() -> [String:String] {
         return [
