@@ -16,7 +16,6 @@ class NYTimesArticle: XMLModelizerModel {
     var media: [String]!
     var category: [String]!
     var pubDate: [String]!
-    var d: [String]!
     
     override class func xmlModelizerXpathKeyMap() -> [String:String] {
         return [
