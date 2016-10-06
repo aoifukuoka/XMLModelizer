@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/aoifukuoka/XMLModelizer"
   s.author       = { "Aoi Fukuoka" => "aoponaopon85746@gmail.com" }
   s.source       = { :git => "https://github.com/aoifukuoka/XMLModelizer.git", :tag => s.version.to_s }
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '9.0'
   s.source_files = 'XMLModelizer/**/*.{h,m,swift}'
   s.dependency "KissXML", "5.1.2"
   # s.description      = <<-DESC
