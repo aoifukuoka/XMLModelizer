@@ -34,39 +34,38 @@ open class XMLModelizer: NSObject {
         if !modelClass.responds(to: #selector(XMLModelizerModel.xmlModelizerXpathKeyMap)) {
             return []
         }
+        if modelClass.hasDifferentXpathTop() {
+            return []
+        }
         
         let document: DDXMLDocument! = try? DDXMLDocument.init(data: xmlData as Data, options: 0)
         var resultSet: [AnyObject] = []
         
         for (key, xpath) in modelClass.xmlModelizerXpathKeyMap() {
             
-            var xpathElements: [String] = xpath.components(separatedBy: "/").filter{$0 != ""}
-            if xpathElements.count == 1 {
+            let xpathElements: [String] = xpath.components(separatedBy: "/").filter{$0 != ""}
+            let topLevelElements: [DDXMLNode]! = try? document.nodes(forXPath: "//" + xpathElements.first!)
+            let newXpath: String = "//" + xpathElements.joined(separator: "/")
+            
+            for topLevelElement in topLevelElements {
                 
-            }else if(xpathElements.count > 1){
+                //create if not exists
+                let idx = topLevelElements.index(of: topLevelElement)
+                if !resultSet.indices.contains(idx!) {
+                    let model = (modelClass as NSObject.Type).init()
+                    resultSet.append(model)
+                }
+                    
+                let values = try? topLevelElement.nodes(forXPath: newXpath)
+                let resultValue: [String] = (values?
+                    .filter{$0.isDescendantOf(node: topLevelElement)})!
+                    .map{$0.stringValue!}
                 
-                let topLevelElements: [DDXMLNode]! = try? document.nodes(forXPath: "//" + xpathElements.removeFirst())
-                let newXpath: String = "//" + xpathElements.joined(separator: "/")
-                for topLevelElement in topLevelElements {
-                    
-                    //create if not exists
-                    let idx = topLevelElements.index(of: topLevelElement)
-                    if !resultSet.indices.contains(idx!) {
-                        let model = (modelClass as NSObject.Type).init()
-                        resultSet.append(model)
-                    }
-                    
-                    let values = try? topLevelElement.nodes(forXPath: newXpath)
-                    let resultValue: [String] = (values?
-                        .filter{$0.isDescendantOf(node: topLevelElement)})!
-                        .map{$0.stringValue!}
-                    
-                    if modelClass.classProperties.contains(key) {
-                        (resultSet[idx!] as! XMLModelizerModel).setValue(resultValue, forKey: key)
-                    }
+                if modelClass.classProperties.contains(key) {
+                    (resultSet[idx!] as! XMLModelizerModel).setValue(resultValue, forKey: key)
                 }
             }
         }
-        return resultSet
+    return resultSet
     }
 }

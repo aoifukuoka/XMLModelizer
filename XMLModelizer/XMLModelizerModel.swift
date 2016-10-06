@@ -36,5 +36,15 @@ open class XMLModelizerModel: NSObject {
         }
         return resultSet
     }
+    
+    open class func hasDifferentXpathTop() -> Bool {
+        return Set(// remove duplicates
+            Array(
+                xmlModelizerXpathKeyMap().values
+                ).map{$0.components(separatedBy: "/")
+                    .filter{$0 != ""}.first!}
+            ).count
+            != 1
+    }
 
 }

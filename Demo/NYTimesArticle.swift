@@ -16,6 +16,7 @@ class NYTimesArticle: XMLModelizerModel {
     var media: [String]!
     var category: [String]!
     var pubDate: [String]!
+    var d: [String]!
     
     override class func xmlModelizerXpathKeyMap() -> [String:String] {
         return [
@@ -23,7 +24,7 @@ class NYTimesArticle: XMLModelizerModel {
             "link":"//item/link",
             "media":"//item/media:content/@url",
             "category":"//item/category",
-            "pubDate":"//item/pubDate"
+            "pubDate":"//item/pubDate",
         ]
     }
     
