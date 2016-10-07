@@ -18,15 +18,15 @@ open class XMLModelizer: NSObject {
         }
         
         let url: URL = URL(string: urlString)!
-        return self.modenize(modelClass: modelClass, url: url)
+        return self.modelize(modelClass: modelClass, url: url)
     }
     
-    open static func modenize(modelClass: XMLModelizerModel.Type, url: URL) -> [AnyObject] {
+    open static func modelize(modelClass: XMLModelizerModel.Type, url: URL) -> [AnyObject] {
         let xmlData: Data! = try? Data(contentsOf: url)
-        return self.modenize(modelClass: modelClass, xmlData: xmlData)
+        return self.modelize(modelClass: modelClass, xmlData: xmlData)
     }
     
-    open static func modenize(modelClass: XMLModelizerModel.Type, xmlData: Data) -> [AnyObject] {
+    open static func modelize(modelClass: XMLModelizerModel.Type, xmlData: Data) -> [AnyObject] {
         
         if !modelClass.isSubclass(of: XMLModelizerModel.self) {
             return []
