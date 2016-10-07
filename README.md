@@ -6,7 +6,7 @@
 
 ![sample](https://github.com/aoifukuoka/XMLModelizer/raw/master/sample.gif)
 
-**XMLModelizer** is a XML Parser, also instance generator of each XML element.
+**XMLModelizer** is a simple XML Parser and Modelizer.
 Once you give model class and XML URL to **XMLModelizer**, you can get model instances that have XML elements which you need.  
 
 ## Example
@@ -92,6 +92,10 @@ print(article.title.first) // "Xi Jinping May Delay Picking China’s Next Leade
 print(article.category[1])// "Communist Party of China"
 
 ```
+
+## Note
+
+If you get error `“Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.` in Xcode8, please set XMLModelizer's plist's “Use Legacy Swift Language Version” **No** in your Pods project.
 
 ## Requirements
 
