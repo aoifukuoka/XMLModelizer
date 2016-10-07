@@ -6,7 +6,7 @@
 
 ![sample](https://github.com/aoifukuoka/XMLModelizer/raw/master/sample.gif)
 
-**XMLModelizer** is a simple XML Parser and Modelizer.
+**XMLModelizer** is a simple XML Parser and Modelizer.  
 Once you give model class and XML URL to **XMLModelizer**, you can get model instances that have XML elements which you need.  
 
 ## Example
