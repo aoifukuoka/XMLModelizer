@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "XMLModelizer"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "XMLModelizer is a simple XML Parser and Modelizer."
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.homepage     = "https://github.com/aoifukuoka/XMLModelizer"
