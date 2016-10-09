@@ -4,7 +4,9 @@
 [![License](https://img.shields.io/cocoapods/l/XMLModelizer.svg?style=flat)](http://cocoapods.org/pods/XMLModelizer)
 [![Platform](https://img.shields.io/cocoapods/p/XMLModelizer.svg?style=flat)](http://cocoapods.org/pods/XMLModelizer)
 
-![sample](https://github.com/aoifukuoka/XMLModelizer/raw/master/sample.gif)
+![sample](https://github.com/aoifukuoka/XMLModelizer/raw/master/sample.gif)  
+
+[japanese README](http://qiita.com/aoifukuoka/items/936fb2f9c631d26ad770)
 
 **XMLModelizer** is a simple XML Parser and Modelizer.  
 Once you give model class and XML URL to **XMLModelizer**, you can get model instances that have XML elements which you need.  
